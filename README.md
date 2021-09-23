@@ -1,5 +1,5 @@
 # LinuxToWinSample
-This is an example project to facilitate C++ builds on Linux to Windows and 'emulation' with Wine.
+This is an example VSCode project to facilitate C++ builds on Linux to Windows and 'emulation' with Wine.
 
 Requires
 ```console
