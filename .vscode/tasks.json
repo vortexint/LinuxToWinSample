@@ -6,8 +6,8 @@
 			"label": "g++ Build project for Windows",
 			"command": "/usr/bin/x86_64-w64-mingw32-g++-win32", // mingw32 path
 			"args": [
-				"-g",
-				"${file}",
+				"-std=c++17",
+				"${workspaceFolder}\\src\\*.cpp", // *.cpp is a wildcard for every C++ file
 				// These libs seem to be required to compile for Windows properly
 				// Windows mingw seems to do it automatically.
 				"-static-libstdc++",
