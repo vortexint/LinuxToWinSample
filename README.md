@@ -4,6 +4,8 @@
 This is an example VSCode project to facilitate C++ builds on Linux to Windows and 'emulation' with Wine.<br/>
 The tasks can be seen on the Command Pallete with Ctrl + Shift + P
 
+![Default Tasks](unknown.png)
+
 Requires
 ```console
 sudo apt-get install mingw-w64
