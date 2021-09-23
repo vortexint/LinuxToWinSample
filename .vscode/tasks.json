@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "g++ Build project for Windows",
+			"command": "/usr/bin/x86_64-w64-mingw32-g++-win32", // mingw32 path
+			"args": [
+				"-g",
+				"${file}",
+				// These libs seem to be required to compile for Windows properly
+				// Windows mingw seems to do it automatically.
+				"-static-libstdc++",
+				"-static-libgcc",
+				//
+				"-o",
+				"${workspaceFolder}/bin/win64/${workspaceFolderBasename}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/x86_64-w64-mingw32-g++-win32" // mingw32 path
+		},
+		{
+			"type": "shell",
+			"label": "Emulate on Wine",
+			"command": "wine ${workspaceFolder}/bin/win64/${workspaceFolderBasename}"
+		}
+	]
+}
